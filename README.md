@@ -12,7 +12,6 @@
 2. [Architecture](#2-architecture)
 3. [System Requirements](#3-system-requirements)
 4. [Installation](#4-installation)
-5. [Configure](#5-configure)
 
 ---
 
@@ -77,7 +76,7 @@ doc_classifier/ (pip install -e: This makes `doc_classifier` importable from any
     ├── pdf_metadata.py    # XMP + Info dict
     ├── pdf_watermark.py   # Text-layer + OCR watermark
     └── image_ocr.py       # Standalone image files
-└── pipeline_output/       # output the results here. You can setup an output folder in file documentClassificationDetector.py
+└── pipeline_output/       # output the results here. You can setup an output folder in file  documentClassificationDetector.py
 │                          # for running the automation.
 │
 test_documents             # this is input testing documents. You can setup an input folder in file documentClassificationDetector.py
@@ -203,10 +202,8 @@ python documentClassificationDetector.py # Test and check the results in folder 
 
 ### 4.2 How to define classification levels and Keywords
 
-class ClassificationLevel(IntEnum):
-    UNKNOWN       = 0
-    NONE          = 5
-    UNCLASSIFIED  = 20
+class ClassificationLevel(IntEnum): Just an example
+    NONE          = 20
     INTERNAL      = 40
     RESTRICTED    = 60
     SECRET        = 90
@@ -216,14 +213,13 @@ DEFAULT_KEYWORD_MAP = {
     "SECRET":        ClassificationLevel.SECRET,
     "RESTRICTED":    ClassificationLevel.RESTRICTED,
     "INTERNAL":      ClassificationLevel.INTERNAL,
-    "UNCLASSIFIED":  ClassificationLevel.UNCLASSIFIED,
-    "NONE":          ClassificationLevel.NONE,
+    "NO CLASSIFICATION":          ClassificationLevel.NONE,
 }
 
 ### 4.3 How to Add MIP Label GUIDs
 Find your label GUIDs in Microsoft Purview Compliance Portal → Information Protection → Labels, then:
 
-(They are essential for API-based automation)
+(Recommend to keep MIP GUIDs in local file)
 
 DEFAULT_MIP_LABEL_CACHE = {
     "xxx: "INTERNAL",
@@ -240,11 +236,13 @@ DEFAULT_CONTENT_MARKING_PROPERTIES = [
 
 
 ### 4.4 Troubleshooting
-Problem	Cause	Solution
-UnsupportedFormatError	File type not supported (.txt, .csv, etc.)	Only .docx/.xlsx/.pptx/.pdf are supported
-FileAccessError	File not found or locked	Check path, close file in other apps
-UNKNOWN for a labeled doc	Label GUID not in cache	Add GUID to mip_label_cache in config
-OCR errors (Poppler)	Poppler not installed	Install Poppler or set enable_ocr=False
-Slow processing	OCR running on large PDFs	Set enable_ocr=False or reduce ocr_max_pages
-Wrong classification	Keyword in unrelated text	Review hits in report, adjust keyword_map
+| Problem                          | Cause                               | Solution                                                              |
+|----------------------------------|-------------------------------------|-----------------------------------------------------------------------|
+| UnsupportedFormatError           | File type not supported (.txt, .csv, etc.) | Only .docx/.xlsx/.pptx/.pdf are supported                             |
+| FileAccessError                  | File not found or locked           | Check path, close file in other apps                                  |
+| UNKNOWN for a labeled doc        | Label GUID not in cache            | Add GUID to `mip_label_cache` in config                               |
+| OCR errors (Poppler)             | Poppler not installed              | Install Poppler or set `enable_ocr=False`                             |
+| Slow processing                  | OCR running on large PDFs          | Set `enable_ocr=False` or reduce `ocr_max_pages`                      |
+| Wrong classification             | Keyword in unrelated text          | Review hits in report, adjust `keyword_map`                           |
+
 ---
