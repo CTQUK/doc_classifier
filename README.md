@@ -53,6 +53,7 @@ module designed to automatically detect document classification levels
 
 ### 1.4 Project Structure
 
+```text
 doc_classifier/ (pip install -e: This makes `doc_classifier` importable from anywhere.)
 │
 ├── pyproject.toml
@@ -81,6 +82,7 @@ doc_classifier/ (pip install -e: This makes `doc_classifier` importable from any
 │
 test_documents             # this is input testing documents. You can setup an input folder in file documentClassificationDetector.py
                            # for running the automation.
+
 
 ## 2. Architecture
 
