@@ -1,5 +1,5 @@
 [project]
-name = "doc-classifier"  # project name on GitHub / installer
+name = "doc-classifier"
 version = "0.1.0"
 description = "Auto-detect document classification levels from metadata, labels, and watermarks."
 readme = "TECHNICAL_GUIDE.md"
@@ -20,3 +20,7 @@ dependencies = [
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["doc_classifier*"]
+exclude = ["pipeline_output*", "test_documents*"]
