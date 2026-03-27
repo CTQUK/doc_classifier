@@ -12,7 +12,7 @@
 2. [Architecture](#2-architecture)
 3. [System Requirements](#3-system-requirements)
 4. [Installation](#4-installation)
-5. [Configure](#5-configure)
+
 
 ---
 
