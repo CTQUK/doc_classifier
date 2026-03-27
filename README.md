@@ -1,7 +1,7 @@
 # Document Classification Detector — Technical Guide
 
 **Version:** 1.0.0
-**Last Updated:** 2026-03-23
+**Last Updated:** 2026-03-03
 **Author:** BTH Development Team
 
 ---
@@ -12,6 +12,7 @@
 2. [Architecture](#2-architecture)
 3. [System Requirements](#3-system-requirements)
 4. [Installation](#4-installation)
+5. [Configure](#5-configure)
 
 ---
 
@@ -47,7 +48,7 @@ module designed to automatically detect document classification levels
 |--------|---------------------|------------------------------------------|
 | Office | .docx, .xlsx, .pptx | office_metadata, office_watermark        |
 | PDF    | .pdf                | pdf_metadata, pdf_watermark, image_ocr   |
-| Image  | .png, .jpg, .tiff   | image_ocr                                |
+| Image  | .png, .jpg, .tiff   | image_ocr (N/A currently)                               |
 
 
 ### 1.4 Project Structure
@@ -76,7 +77,7 @@ doc_classifier/ (pip install -e: This makes `doc_classifier` importable from any
     ├── pdf_metadata.py    # XMP + Info dict
     ├── pdf_watermark.py   # Text-layer + OCR watermark
     └── image_ocr.py       # Standalone image files
-└── pipeline_output/       # output the results here. You can setup an output folder in file  documentClassificationDetector.py
+└── pipeline_output/       # output the results here. You can setup an output folder in file documentClassificationDetector.py
 │                          # for running the automation.
 │
 test_documents             # this is input testing documents. You can setup an input folder in file documentClassificationDetector.py
@@ -170,10 +171,18 @@ test_documents             # this is input testing documents. You can setup an i
 
 ```bash
 
-# 1. Clone or copy the project
-cd /path/to/your/projects
-mkdir doc_classifier
+### 1. Prerequisites
+- **Git**: Download from [git-scm.com](https://git-scm.com) if not installed
+- **VS Code** (recommended): [code.visualstudio.com](https://code.visualstudio.com)
+- **Python 3.10+**: Check with `python --version`
+
+### 2. Clone the Repository
+Open **Command Prompt** or **PowerShell** and run:
+
+```bash
+git clone https://github.com/CTQUK/doc_classifier.git
 cd doc_classifier
+
 
 # 2. Create virtual environment
 python -m venv .venv
@@ -183,26 +192,27 @@ python -m venv .venv
 .\\.venv\\Scripts\\Activate.ps1
 # Windows CMD:
 .\\.venv\\Scripts\\activate.bat
-# Linux/macOS:
-source .venv/bin/activate
+
 
 # 4. Upgrade pip
 python -m pip install --upgrade pip
 
-# 5. Install dependencies
-pip install -r requirements.txt
+# 5. Install Package
+pip install -e .
+
+This installs: doc_classifier package (editable - changes take effect immediately)
+All dependencies (pandas, python-docx, openpyxl, etc.)
 
 # 6. Verify installation
-python -c "from doc_classifier import DocumentClassifier; print('OK')"
+python -c "from classifier import DocumentClassifier; print('OK')"
 
 # 7. Run (powershell)
-python createAllFiles.py # Create all python files
 python documentClassificationDetector.py # Test and check the results in folder pipeline_output
 
 
 ### 4.2 How to define classification levels and Keywords
 
-class ClassificationLevel(IntEnum): Just an example
+class ClassificationLevel(IntEnum):
     NONE          = 20
     INTERNAL      = 40
     RESTRICTED    = 60
@@ -219,13 +229,13 @@ DEFAULT_KEYWORD_MAP = {
 ### 4.3 How to Add MIP Label GUIDs
 Find your label GUIDs in Microsoft Purview Compliance Portal → Information Protection → Labels, then:
 
-(Recommend to keep MIP GUIDs in local file)
+(They are essential for API-based automation)
 
 DEFAULT_MIP_LABEL_CACHE = {
-    "xxx: "INTERNAL",
-    "xxx": "NONE",
-    "xxx": "RESTRICTED",
-    "xxx": "SECRET",
+    "xxxx": "INTERNAL",
+    "xxxx": "NONE",
+    "xxxx": "RESTRICTED",
+    "xxxx": "SECRET",
 }
 
 DEFAULT_CONTENT_MARKING_PROPERTIES = [
