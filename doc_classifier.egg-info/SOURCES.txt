@@ -1,0 +1,8 @@
+README.md
+TECHNICAL_GUIDE.md
+pyproject.toml
+doc_classifier.egg-info/PKG-INFO
+doc_classifier.egg-info/SOURCES.txt
+doc_classifier.egg-info/dependency_links.txt
+doc_classifier.egg-info/requires.txt
+doc_classifier.egg-info/top_level.txt

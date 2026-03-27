@@ -1,0 +1,10 @@
+pandas
+python-docx
+openpyxl
+python-pptx
+pikepdf
+pdfplumber
+pdf2image
+pytesseract
+Pillow
+lxml
