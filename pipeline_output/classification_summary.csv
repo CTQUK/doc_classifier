@@ -1,0 +1,21 @@
+Filename,Classification,Level Value,Action,Storage Tier,Encrypt,Access Group,Hit Count,Sources,Processing (ms)
+Internal.docx,Internal,40,ROUTE_INTERNAL,internal-store,False,all-employees,2,content_marking; msip_label,76.55
+Internal.pptx,Internal,40,ROUTE_INTERNAL,internal-store,False,all-employees,3,content_marking; pptx_layout_watermark; msip_label,61.91
+Internal.xlsx,Internal,40,ROUTE_INTERNAL,internal-store,False,all-employees,1,msip_label,2.27
+NoClassification.docx,None,20,ROUTE_NONE,none-store,False,all-employees,1,msip_label,2.15
+NoClassification.pdf,None,20,ROUTE_NONE,none-store,False,all-employees,1,mip_label_guid,789.57
+NoClassification.pptx,None,20,ROUTE_NONE,none-store,False,all-employees,1,msip_label,58.86
+NoClassification.xlsx,None,20,ROUTE_NONE,none-store,False,all-employees,1,msip_label,2.34
+NoClassification1.pdf,None,20,ROUTE_NONE,none-store,False,all-employees,2,pdf_text_layer; mip_label_guid,14.15
+Restricted.docx,Restricted,60,ROUTE_RESTRICTED,restricted-store,True,restricted-team,2,content_marking; msip_label,3.41
+Restricted.pdf,Restricted,60,ROUTE_RESTRICTED,restricted-store,True,restricted-team,1,mip_label_guid,22.51
+Restricted.pptx,Restricted,60,ROUTE_RESTRICTED,restricted-store,True,restricted-team,3,content_marking; pptx_layout_watermark; msip_label,79.61
+Restricted.xlsx,Restricted,60,ROUTE_RESTRICTED,restricted-store,True,restricted-team,1,msip_label,4.53
+Secret_Protected.docx,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,2,content_marking; msip_label,5.57
+Secret_Protected.pdf,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,1,mip_label_guid,40.14
+Secret_Protected.pptx,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,1,encrypted_file_detection,3.31
+Secret_Protected.xlsx,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,1,encrypted_file_detection,1.57
+Secret_Unprotected.docx,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,2,content_marking; msip_label,6.61
+Secret_Unprotected.pdf,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,2,pdf_text_layer; mip_label_guid,17.47
+Secret_UnProtected.pptx,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,3,content_marking; pptx_layout_watermark; msip_label,75.85
+Secret_UnProtected.xlsx,Secret,90,ROUTE_SECURE,classified-vault,True,secret-cleared,1,msip_label,2.45

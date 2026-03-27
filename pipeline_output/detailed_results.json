@@ -1,0 +1,544 @@
+{
+  "results": [
+    {
+      "filepath": "test_documents\\Internal.docx",
+      "filename": "Internal.docx",
+      "classification": "Internal",
+      "level": "INTERNAL",
+      "level_value": 40,
+      "routing": {
+        "action": "ROUTE_INTERNAL",
+        "storage_tier": "internal-store",
+        "destination": "pipeline_output\\routed\\internal",
+        "encrypt": false,
+        "audit_required": false,
+        "access_group": "all-employees",
+        "retention_years": 2
+      },
+      "detection": {
+        "hit_count": 2,
+        "sources": [
+          "content_marking",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 76.55
+    },
+    {
+      "filepath": "test_documents\\Internal.pptx",
+      "filename": "Internal.pptx",
+      "classification": "Internal",
+      "level": "INTERNAL",
+      "level_value": 40,
+      "routing": {
+        "action": "ROUTE_INTERNAL",
+        "storage_tier": "internal-store",
+        "destination": "pipeline_output\\routed\\internal",
+        "encrypt": false,
+        "audit_required": false,
+        "access_group": "all-employees",
+        "retention_years": 2
+      },
+      "detection": {
+        "hit_count": 3,
+        "sources": [
+          "content_marking",
+          "pptx_layout_watermark",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 61.91
+    },
+    {
+      "filepath": "test_documents\\Internal.xlsx",
+      "filename": "Internal.xlsx",
+      "classification": "Internal",
+      "level": "INTERNAL",
+      "level_value": 40,
+      "routing": {
+        "action": "ROUTE_INTERNAL",
+        "storage_tier": "internal-store",
+        "destination": "pipeline_output\\routed\\internal",
+        "encrypt": false,
+        "audit_required": false,
+        "access_group": "all-employees",
+        "retention_years": 2
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 2.27
+    },
+    {
+      "filepath": "test_documents\\NoClassification.docx",
+      "filename": "NoClassification.docx",
+      "classification": "None",
+      "level": "NONE",
+      "level_value": 20,
+      "routing": {
+        "action": "ROUTE_NONE",
+        "storage_tier": "none-store",
+        "destination": "pipeline_output\\routed\\none",
+        "encrypt": false,
+        "audit_required": true,
+        "access_group": "all-employees",
+        "retention_years": 1,
+        "notifications": [
+          "compliance-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 2.15
+    },
+    {
+      "filepath": "test_documents\\NoClassification.pdf",
+      "filename": "NoClassification.pdf",
+      "classification": "None",
+      "level": "NONE",
+      "level_value": 20,
+      "routing": {
+        "action": "ROUTE_NONE",
+        "storage_tier": "none-store",
+        "destination": "pipeline_output\\routed\\none",
+        "encrypt": false,
+        "audit_required": true,
+        "access_group": "all-employees",
+        "retention_years": 1,
+        "notifications": [
+          "compliance-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "mip_label_guid"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 789.57
+    },
+    {
+      "filepath": "test_documents\\NoClassification.pptx",
+      "filename": "NoClassification.pptx",
+      "classification": "None",
+      "level": "NONE",
+      "level_value": 20,
+      "routing": {
+        "action": "ROUTE_NONE",
+        "storage_tier": "none-store",
+        "destination": "pipeline_output\\routed\\none",
+        "encrypt": false,
+        "audit_required": true,
+        "access_group": "all-employees",
+        "retention_years": 1,
+        "notifications": [
+          "compliance-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 58.86
+    },
+    {
+      "filepath": "test_documents\\NoClassification.xlsx",
+      "filename": "NoClassification.xlsx",
+      "classification": "None",
+      "level": "NONE",
+      "level_value": 20,
+      "routing": {
+        "action": "ROUTE_NONE",
+        "storage_tier": "none-store",
+        "destination": "pipeline_output\\routed\\none",
+        "encrypt": false,
+        "audit_required": true,
+        "access_group": "all-employees",
+        "retention_years": 1,
+        "notifications": [
+          "compliance-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 2.34
+    },
+    {
+      "filepath": "test_documents\\NoClassification1.pdf",
+      "filename": "NoClassification1.pdf",
+      "classification": "None",
+      "level": "NONE",
+      "level_value": 20,
+      "routing": {
+        "action": "ROUTE_NONE",
+        "storage_tier": "none-store",
+        "destination": "pipeline_output\\routed\\none",
+        "encrypt": false,
+        "audit_required": true,
+        "access_group": "all-employees",
+        "retention_years": 1,
+        "notifications": [
+          "compliance-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 2,
+        "sources": [
+          "pdf_text_layer",
+          "mip_label_guid"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 14.15
+    },
+    {
+      "filepath": "test_documents\\Restricted.docx",
+      "filename": "Restricted.docx",
+      "classification": "Restricted",
+      "level": "RESTRICTED",
+      "level_value": 60,
+      "routing": {
+        "action": "ROUTE_RESTRICTED",
+        "storage_tier": "restricted-store",
+        "destination": "pipeline_output\\routed\\restricted",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "restricted-team",
+        "retention_years": 3
+      },
+      "detection": {
+        "hit_count": 2,
+        "sources": [
+          "content_marking",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 3.41
+    },
+    {
+      "filepath": "test_documents\\Restricted.pdf",
+      "filename": "Restricted.pdf",
+      "classification": "Restricted",
+      "level": "RESTRICTED",
+      "level_value": 60,
+      "routing": {
+        "action": "ROUTE_RESTRICTED",
+        "storage_tier": "restricted-store",
+        "destination": "pipeline_output\\routed\\restricted",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "restricted-team",
+        "retention_years": 3
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "mip_label_guid"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 22.51
+    },
+    {
+      "filepath": "test_documents\\Restricted.pptx",
+      "filename": "Restricted.pptx",
+      "classification": "Restricted",
+      "level": "RESTRICTED",
+      "level_value": 60,
+      "routing": {
+        "action": "ROUTE_RESTRICTED",
+        "storage_tier": "restricted-store",
+        "destination": "pipeline_output\\routed\\restricted",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "restricted-team",
+        "retention_years": 3
+      },
+      "detection": {
+        "hit_count": 3,
+        "sources": [
+          "content_marking",
+          "pptx_layout_watermark",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 79.61
+    },
+    {
+      "filepath": "test_documents\\Restricted.xlsx",
+      "filename": "Restricted.xlsx",
+      "classification": "Restricted",
+      "level": "RESTRICTED",
+      "level_value": 60,
+      "routing": {
+        "action": "ROUTE_RESTRICTED",
+        "storage_tier": "restricted-store",
+        "destination": "pipeline_output\\routed\\restricted",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "restricted-team",
+        "retention_years": 3
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 4.53
+    },
+    {
+      "filepath": "test_documents\\Secret_Protected.docx",
+      "filename": "Secret_Protected.docx",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 2,
+        "sources": [
+          "content_marking",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 5.57
+    },
+    {
+      "filepath": "test_documents\\Secret_Protected.pdf",
+      "filename": "Secret_Protected.pdf",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "mip_label_guid"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 40.14
+    },
+    {
+      "filepath": "test_documents\\Secret_Protected.pptx",
+      "filename": "Secret_Protected.pptx",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "encrypted_file_detection"
+        ],
+        "highest_confidence": 0.85
+      },
+      "processing_ms": 3.31
+    },
+    {
+      "filepath": "test_documents\\Secret_Protected.xlsx",
+      "filename": "Secret_Protected.xlsx",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "encrypted_file_detection"
+        ],
+        "highest_confidence": 0.85
+      },
+      "processing_ms": 1.57
+    },
+    {
+      "filepath": "test_documents\\Secret_Unprotected.docx",
+      "filename": "Secret_Unprotected.docx",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 2,
+        "sources": [
+          "content_marking",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 6.61
+    },
+    {
+      "filepath": "test_documents\\Secret_Unprotected.pdf",
+      "filename": "Secret_Unprotected.pdf",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 2,
+        "sources": [
+          "pdf_text_layer",
+          "mip_label_guid"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 17.47
+    },
+    {
+      "filepath": "test_documents\\Secret_UnProtected.pptx",
+      "filename": "Secret_UnProtected.pptx",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 3,
+        "sources": [
+          "content_marking",
+          "pptx_layout_watermark",
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 75.85
+    },
+    {
+      "filepath": "test_documents\\Secret_UnProtected.xlsx",
+      "filename": "Secret_UnProtected.xlsx",
+      "classification": "Secret",
+      "level": "SECRET",
+      "level_value": 90,
+      "routing": {
+        "action": "ROUTE_SECURE",
+        "storage_tier": "classified-vault",
+        "destination": "pipeline_output\\routed\\secret",
+        "encrypt": true,
+        "audit_required": true,
+        "access_group": "secret-cleared",
+        "retention_years": 7,
+        "blocked": false,
+        "notifications": [
+          "security-team@company.com"
+        ]
+      },
+      "detection": {
+        "hit_count": 1,
+        "sources": [
+          "msip_label"
+        ],
+        "highest_confidence": 1.0
+      },
+      "processing_ms": 2.45
+    }
+  ],
+  "errors": []
+}

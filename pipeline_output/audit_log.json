@@ -1,0 +1,294 @@
+[
+  {
+    "timestamp": "2026-03-27T07:45:28.220705+00:00",
+    "filepath": "test_documents\\Internal.docx",
+    "filename": "Internal.docx",
+    "classification": "Internal",
+    "level_value": 40,
+    "action": "ROUTE_INTERNAL",
+    "storage_tier": "internal-store",
+    "hit_count": 2,
+    "detection_sources": [
+      "content_marking",
+      "msip_label"
+    ],
+    "processing_ms": 76.55
+  },
+  {
+    "timestamp": "2026-03-27T07:45:28.283000+00:00",
+    "filepath": "test_documents\\Internal.pptx",
+    "filename": "Internal.pptx",
+    "classification": "Internal",
+    "level_value": 40,
+    "action": "ROUTE_INTERNAL",
+    "storage_tier": "internal-store",
+    "hit_count": 3,
+    "detection_sources": [
+      "content_marking",
+      "pptx_layout_watermark",
+      "msip_label"
+    ],
+    "processing_ms": 61.91
+  },
+  {
+    "timestamp": "2026-03-27T07:45:28.285529+00:00",
+    "filepath": "test_documents\\Internal.xlsx",
+    "filename": "Internal.xlsx",
+    "classification": "Internal",
+    "level_value": 40,
+    "action": "ROUTE_INTERNAL",
+    "storage_tier": "internal-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "msip_label"
+    ],
+    "processing_ms": 2.27
+  },
+  {
+    "timestamp": "2026-03-27T07:45:28.287860+00:00",
+    "filepath": "test_documents\\NoClassification.docx",
+    "filename": "NoClassification.docx",
+    "classification": "None",
+    "level_value": 20,
+    "action": "ROUTE_NONE",
+    "storage_tier": "none-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "msip_label"
+    ],
+    "processing_ms": 2.15
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.077626+00:00",
+    "filepath": "test_documents\\NoClassification.pdf",
+    "filename": "NoClassification.pdf",
+    "classification": "None",
+    "level_value": 20,
+    "action": "ROUTE_NONE",
+    "storage_tier": "none-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "mip_label_guid"
+    ],
+    "processing_ms": 789.57
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.136900+00:00",
+    "filepath": "test_documents\\NoClassification.pptx",
+    "filename": "NoClassification.pptx",
+    "classification": "None",
+    "level_value": 20,
+    "action": "ROUTE_NONE",
+    "storage_tier": "none-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "msip_label"
+    ],
+    "processing_ms": 58.86
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.139520+00:00",
+    "filepath": "test_documents\\NoClassification.xlsx",
+    "filename": "NoClassification.xlsx",
+    "classification": "None",
+    "level_value": 20,
+    "action": "ROUTE_NONE",
+    "storage_tier": "none-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "msip_label"
+    ],
+    "processing_ms": 2.34
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.153896+00:00",
+    "filepath": "test_documents\\NoClassification1.pdf",
+    "filename": "NoClassification1.pdf",
+    "classification": "None",
+    "level_value": 20,
+    "action": "ROUTE_NONE",
+    "storage_tier": "none-store",
+    "hit_count": 2,
+    "detection_sources": [
+      "pdf_text_layer",
+      "mip_label_guid"
+    ],
+    "processing_ms": 14.15
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.157549+00:00",
+    "filepath": "test_documents\\Restricted.docx",
+    "filename": "Restricted.docx",
+    "classification": "Restricted",
+    "level_value": 60,
+    "action": "ROUTE_RESTRICTED",
+    "storage_tier": "restricted-store",
+    "hit_count": 2,
+    "detection_sources": [
+      "content_marking",
+      "msip_label"
+    ],
+    "processing_ms": 3.41
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.180319+00:00",
+    "filepath": "test_documents\\Restricted.pdf",
+    "filename": "Restricted.pdf",
+    "classification": "Restricted",
+    "level_value": 60,
+    "action": "ROUTE_RESTRICTED",
+    "storage_tier": "restricted-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "mip_label_guid"
+    ],
+    "processing_ms": 22.51
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.260293+00:00",
+    "filepath": "test_documents\\Restricted.pptx",
+    "filename": "Restricted.pptx",
+    "classification": "Restricted",
+    "level_value": 60,
+    "action": "ROUTE_RESTRICTED",
+    "storage_tier": "restricted-store",
+    "hit_count": 3,
+    "detection_sources": [
+      "content_marking",
+      "pptx_layout_watermark",
+      "msip_label"
+    ],
+    "processing_ms": 79.61
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.265178+00:00",
+    "filepath": "test_documents\\Restricted.xlsx",
+    "filename": "Restricted.xlsx",
+    "classification": "Restricted",
+    "level_value": 60,
+    "action": "ROUTE_RESTRICTED",
+    "storage_tier": "restricted-store",
+    "hit_count": 1,
+    "detection_sources": [
+      "msip_label"
+    ],
+    "processing_ms": 4.53
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.271106+00:00",
+    "filepath": "test_documents\\Secret_Protected.docx",
+    "filename": "Secret_Protected.docx",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 2,
+    "detection_sources": [
+      "content_marking",
+      "msip_label"
+    ],
+    "processing_ms": 5.57
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.311579+00:00",
+    "filepath": "test_documents\\Secret_Protected.pdf",
+    "filename": "Secret_Protected.pdf",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 1,
+    "detection_sources": [
+      "mip_label_guid"
+    ],
+    "processing_ms": 40.14
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.315308+00:00",
+    "filepath": "test_documents\\Secret_Protected.pptx",
+    "filename": "Secret_Protected.pptx",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 1,
+    "detection_sources": [
+      "encrypted_file_detection"
+    ],
+    "processing_ms": 3.31
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.317216+00:00",
+    "filepath": "test_documents\\Secret_Protected.xlsx",
+    "filename": "Secret_Protected.xlsx",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 1,
+    "detection_sources": [
+      "encrypted_file_detection"
+    ],
+    "processing_ms": 1.57
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.324158+00:00",
+    "filepath": "test_documents\\Secret_Unprotected.docx",
+    "filename": "Secret_Unprotected.docx",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 2,
+    "detection_sources": [
+      "content_marking",
+      "msip_label"
+    ],
+    "processing_ms": 6.61
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.341910+00:00",
+    "filepath": "test_documents\\Secret_Unprotected.pdf",
+    "filename": "Secret_Unprotected.pdf",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 2,
+    "detection_sources": [
+      "pdf_text_layer",
+      "mip_label_guid"
+    ],
+    "processing_ms": 17.47
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.418114+00:00",
+    "filepath": "test_documents\\Secret_UnProtected.pptx",
+    "filename": "Secret_UnProtected.pptx",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 3,
+    "detection_sources": [
+      "content_marking",
+      "pptx_layout_watermark",
+      "msip_label"
+    ],
+    "processing_ms": 75.85
+  },
+  {
+    "timestamp": "2026-03-27T07:45:29.420817+00:00",
+    "filepath": "test_documents\\Secret_UnProtected.xlsx",
+    "filename": "Secret_UnProtected.xlsx",
+    "classification": "Secret",
+    "level_value": 90,
+    "action": "ROUTE_SECURE",
+    "storage_tier": "classified-vault",
+    "hit_count": 1,
+    "detection_sources": [
+      "msip_label"
+    ],
+    "processing_ms": 2.45
+  }
+]

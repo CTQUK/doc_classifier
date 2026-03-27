@@ -171,10 +171,18 @@ test_documents             # this is input testing documents. You can setup an i
 
 ```bash
 
-# 1. Clone or copy the project
-cd /path/to/your/projects
-mkdir doc_classifier
+### 1. Prerequisites
+- **Git**: Download from [git-scm.com](https://git-scm.com) if not installed
+- **VS Code** (recommended): [code.visualstudio.com](https://code.visualstudio.com)
+- **Python 3.10+**: Check with `python --version`
+
+### 2. Clone the Repository
+Open **Command Prompt** or **PowerShell** and run:
+
+```bash
+git clone https://github.com/CTQUK/doc_classifier.git
 cd doc_classifier
+
 
 # 2. Create virtual environment
 python -m venv .venv
@@ -184,29 +192,28 @@ python -m venv .venv
 .\\.venv\\Scripts\\Activate.ps1
 # Windows CMD:
 .\\.venv\\Scripts\\activate.bat
-# Linux/macOS:
-source .venv/bin/activate
+
 
 # 4. Upgrade pip
 python -m pip install --upgrade pip
 
-# 5. Install dependencies
-pip install -r requirements.txt
+# 5. Install Package
+pip install -e .
+
+This installs: doc_classifier package (editable - changes take effect immediately)
+All dependencies (pandas, python-docx, openpyxl, etc.)
 
 # 6. Verify installation
-python -c "from doc_classifier import DocumentClassifier; print('OK')"
+python -c "from classifier import DocumentClassifier; print('OK')"
 
 # 7. Run (powershell)
-python createAllFiles.py # Create all python files
 python documentClassificationDetector.py # Test and check the results in folder pipeline_output
 
 
 ### 4.2 How to define classification levels and Keywords
 
 class ClassificationLevel(IntEnum):
-    UNKNOWN       = 0
-    NONE          = 5
-    UNCLASSIFIED  = 20
+    NONE          = 20
     INTERNAL      = 40
     RESTRICTED    = 60
     SECRET        = 90
@@ -216,8 +223,7 @@ DEFAULT_KEYWORD_MAP = {
     "SECRET":        ClassificationLevel.SECRET,
     "RESTRICTED":    ClassificationLevel.RESTRICTED,
     "INTERNAL":      ClassificationLevel.INTERNAL,
-    "UNCLASSIFIED":  ClassificationLevel.UNCLASSIFIED,
-    "NONE":          ClassificationLevel.NONE,
+    "NO CLASSIFICATION":          ClassificationLevel.NONE,
 }
 
 ### 4.3 How to Add MIP Label GUIDs
