@@ -23,14 +23,18 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+"""
 from doc_classifier import (
     DocumentClassifier,
     ClassifierConfig,
     ClassificationLevel,
     ClassificationReport,
 )
-from doc_classifier.exceptions import DocClassifierError
+"""
+from config import ClassifierConfig, ClassificationLevel
+from classifier import DocumentClassifier
+from exceptions import DocClassifierError
+from models import ClassificationReport
 
 
 # ======================================================================

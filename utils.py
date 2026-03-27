@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 from typing import List, Optional
 
-from doc_classifier.config import ClassificationLevel, ClassifierConfig
-from doc_classifier.models import ExtractionHit
+from config import ClassifierConfig
+from models import ExtractionHit
 
 
 FORMAT_GROUPS = {
@@ -87,7 +87,7 @@ def scan_text_for_keywords(
 
 
 def validate_file(filepath: str) -> None:
-    from doc_classifier.exceptions import FileAccessError
+    from exceptions import FileAccessError
     if not os.path.isfile(filepath):
         raise FileAccessError(f"File not found: {filepath}")
     if not os.access(filepath, os.R_OK):

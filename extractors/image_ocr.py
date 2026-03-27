@@ -3,9 +3,9 @@ import logging
 import os
 from typing import Set
 
-from doc_classifier.extractors.base import BaseExtractor
-from doc_classifier.models import ExtractionResult
-from doc_classifier.utils import scan_text_for_keywords, detect_format_group
+from extractors.base import BaseExtractor
+from models import ExtractionResult
+from utils import scan_text_for_keywords, detect_format_group
 
 logger = logging.getLogger(__name__)
 

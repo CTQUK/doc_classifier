@@ -4,10 +4,10 @@ from typing import List, Set
 
 from lxml import etree
 
-from doc_classifier.config import ClassifierConfig
-from doc_classifier.extractors.base import BaseExtractor
-from doc_classifier.models import ExtractionResult
-from doc_classifier.utils import get_office_subtype, scan_text_for_keywords
+from config import ClassifierConfig
+from extractors.base import BaseExtractor
+from models import ExtractionResult
+from utils import get_office_subtype, scan_text_for_keywords
 
 logger = logging.getLogger(__name__)
 

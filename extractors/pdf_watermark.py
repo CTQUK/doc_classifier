@@ -2,9 +2,9 @@ from __future__ import annotations
 import logging
 from typing import Set
 
-from doc_classifier.extractors.base import BaseExtractor
-from doc_classifier.models import ExtractionResult
-from doc_classifier.utils import scan_text_for_keywords
+from extractors.base import BaseExtractor
+from models import ExtractionResult
+from utils import scan_text_for_keywords
 
 logger = logging.getLogger(__name__)
 

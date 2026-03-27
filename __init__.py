@@ -1,6 +1,6 @@
-from doc_classifier.classifier import DocumentClassifier
-from doc_classifier.config import ClassificationLevel, ClassifierConfig
-from doc_classifier.models import ClassificationReport, ExtractionHit
+from classifier import DocumentClassifier
+from config import ClassificationLevel, ClassifierConfig
+from models import ClassificationReport, ExtractionHit
 
 __all__ = [
     "DocumentClassifier",

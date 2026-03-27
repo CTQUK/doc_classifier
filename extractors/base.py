@@ -2,8 +2,8 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Set
 
-from doc_classifier.config import ClassifierConfig
-from doc_classifier.models import ExtractionResult
+from config import ClassifierConfig
+from models import ExtractionResult
 
 
 class BaseExtractor(ABC):

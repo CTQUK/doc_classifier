@@ -5,9 +5,9 @@ from typing import Set
 
 from lxml import etree
 
-from doc_classifier.extractors.base import BaseExtractor
-from doc_classifier.models import ExtractionResult, ExtractionHit
-from doc_classifier.utils import scan_text_for_keywords
+from extractors.base import BaseExtractor
+from models import ExtractionResult, ExtractionHit
+from utils import scan_text_for_keywords
 
 logger = logging.getLogger(__name__)
 

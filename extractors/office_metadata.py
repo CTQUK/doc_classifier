@@ -6,10 +6,10 @@ from zipfile import ZipFile, BadZipFile
 
 from lxml import etree
 
-from doc_classifier.config import ClassifierConfig, ClassificationLevel
-from doc_classifier.extractors.base import BaseExtractor
-from doc_classifier.models import ExtractionHit, ExtractionResult
-from doc_classifier.utils import scan_text_for_keywords
+from config import ClassifierConfig, ClassificationLevel
+from extractors.base import BaseExtractor
+from models import ExtractionHit, ExtractionResult
+from utils import scan_text_for_keywords
 
 logger = logging.getLogger(__name__)
 

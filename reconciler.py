@@ -1,8 +1,8 @@
 from __future__ import annotations
 from typing import List
 
-from doc_classifier.config import ClassificationLevel, ClassifierConfig
-from doc_classifier.models import ClassificationReport, ExtractionResult
+from config import ClassificationLevel, ClassifierConfig
+from models import ClassificationReport, ExtractionResult
 
 
 def _to_level(val) -> ClassificationLevel:

@@ -2,8 +2,8 @@ from __future__ import annotations
 import logging
 from typing import List, Type
 
-from doc_classifier.config import ClassifierConfig
-from doc_classifier.extractors.base import BaseExtractor
+from config import ClassifierConfig
+from extractors.base import BaseExtractor
 
 logger = logging.getLogger(__name__)
 
@@ -20,10 +20,10 @@ class ExtractorRegistry:
         logger.debug("Registered extractor: %s", instance.name)
 
     def register_all_defaults(self) -> None:
-        from doc_classifier.extractors.office_metadata import OfficeMetadataExtractor
-        from doc_classifier.extractors.office_watermark import OfficeWatermarkExtractor
-        from doc_classifier.extractors.pdf_metadata import PdfMetadataExtractor
-        from doc_classifier.extractors.pdf_watermark import PdfWatermarkExtractor
+        from extractors.office_metadata import OfficeMetadataExtractor
+        from extractors.office_watermark import OfficeWatermarkExtractor
+        from extractors.pdf_metadata import PdfMetadataExtractor
+        from extractors.pdf_watermark import PdfWatermarkExtractor
 
         for cls in [
             OfficeMetadataExtractor,
@@ -35,7 +35,7 @@ class ExtractorRegistry:
 
         if self._config.enable_ocr:
             try:
-                from doc_classifier.extractors.image_ocr import ImageOcrExtractor
+                from extractors.image_ocr import ImageOcrExtractor
                 self.register(ImageOcrExtractor)
             except ImportError:
                 logger.warning("OCR dependencies missing. Image OCR extractor disabled.")

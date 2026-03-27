@@ -3,12 +3,12 @@ import logging
 import time
 from typing import Optional
 
-from doc_classifier.config import ClassifierConfig
-from doc_classifier.exceptions import UnsupportedFormatError
-from doc_classifier.extractors.registry import ExtractorRegistry
-from doc_classifier.models import ClassificationReport
-from doc_classifier.reconciler import reconcile
-from doc_classifier.utils import detect_format_group, validate_file
+from config import ClassifierConfig
+from exceptions import UnsupportedFormatError
+from extractors.registry import ExtractorRegistry
+from models import ClassificationReport
+from reconciler import reconcile
+from utils import detect_format_group, validate_file
 
 logger = logging.getLogger(__name__)
 
